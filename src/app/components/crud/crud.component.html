@@ -1,1 +1,10 @@
-<p>crud works!</p>
+<!-- na interpolacao eu pego minha variavel imagens e digo q ela é um json -->
+<!-- pre serve pra organizar meu json -->
+<!-- <pre>
+  {{images | json}}
+</pre> -->
+
+<div *ngFor="let i of images">
+  <h1>{{i.title}}</h1>
+  <img [attr.src]= "i.url"/>
+</div>

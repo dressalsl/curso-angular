@@ -7,6 +7,7 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { SegundoComponenteComponent } from './segundo-componente/segundo-componente.component';
 import { NgIfNgForComponent } from './ng-if-ng-for/ng-if-ng-for.component';
 import { CrudComponent } from './components/crud/crud.component';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,9 +19,10 @@ import { CrudComponent } from './components/crud/crud.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
